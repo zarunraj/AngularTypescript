@@ -1,0 +1,19 @@
+﻿<div id="login-outter"  >
+    <div class="login-logo"><i class="glyphicon glyphicon-ok"></i></div>
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control txt-login" ng-model="userName" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control txt-login" ng-model="password" placeholder="Password">
+        </div>
+        <div class="col-md-12 login-ext-links">
+            <div class="col-md-6 text-left no-pad"><a href="#/forgot" class="">Forgot Password</a></div>
+            <div class="col-md-6 text-right no-pad"><a href="#/register" class="">Register</a></div>
+        </div>
+        <div class="col-md-12">
+            <p class="login-error">{{loginError}}</p>
+        </div>
+        <button type="submit" class="btn-login" ng-disabled="!(userName && password)" ng-click="Login.ValidateLogin()">Log in</button>
+    </form>
+</div>

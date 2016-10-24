@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" /> 
+    <link href="css/app.min.css" rel="stylesheet" />
+</head>
+<body>
+    <section class="body-bg"></section>
+    <section class="wrapper" ng-app="UserTest" ng-controller="UserTest.Controllers.AppController">
+        <section class="top-bar col-md-12"></section>
+        <div class="clearfix"></div>
+        <section class="side-menu col-md-1 no-pad" ng-style="sideMenuStyle" >
+            <ul>
+                <li class="col-xs-3 col-md-12 no-pad"><a href="#/dashboard"><i class="fa fa-dashboard fa-3x" aria-hidden="true"></i> <span>Dashboard</span></a></li>
+                <li class="col-xs-3 col-md-12 no-pad"><a href="#/expenses"><i class="fa fa-shopping-cart  fa-3x" aria-hidden="true"></i> <span>Expenses</span></a></li>
+                <li class="col-xs-3 col-md-12 no-pad"><a href="#/daybook"><i class="fa fa-table fa-3x" aria-hidden="true"></i> <span>DayBook</span></a></li>
+                <li class="col-xs-3 col-md-12 no-pad"><a href="#/report"><i class="fa fa-pie-chart fa-3x" aria-hidden="true"></i> <span>Report</span></a></li>
+            </ul>
+        </section>
+        <section class="top-title-bar col-md-11">Welcome !</section>
+        <section class="top-title-bar-border col-md-11"></section>
+        <div ng-view="" class="view-wrapper col-md-11"></div>
+    </section>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="app/Helpers/Constants.js"></script>
+    <script src="app/appRoute.js"></script>
+    <script src="app/app.js"></script>
+
+
+    <!--Services-->
+    <script src="app/Helpers/AppHttpService.js"></script>
+    <script src="app/Services/ServiceBase.js"></script>
+    <script src="app/Services/User/UserService.js"></script>
+
+    <!--Controllers-->
+    <script src="app/Controllers/AppController.js"></script>
+    <script src="app/Controllers/DashboardController.js"></script>
+</body>
+</html>

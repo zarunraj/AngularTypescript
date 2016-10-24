@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+
+</head>
+<body>
+    <div class="body-bg"></div>
+    <div class="wrapper" ng-app="UserTest" ng-controller="UserTest.User.Controllers.AppController">
+        <div ng-view=""></div>
+    </div> 
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="app/Helpers/Constants.js"></script>
+    <script src="app/app.user.route.js"></script>
+    <script src="app/app.user.js"></script>
+
+
+    <!--Services-->
+    <script src="app/Helpers/AppHttpService.js"></script>
+    <script src="app/Services/ServiceBase.js"></script>
+    <script src="app/Services/User/UserService.js"></script>
+
+    <!--Controllers-->
+    <script src="app/Controllers/User/AppController.js"></script>
+    <script src="app/Controllers/User/LoginController.js"></script>
+</body>
+</html>

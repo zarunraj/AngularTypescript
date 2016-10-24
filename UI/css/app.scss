@@ -1,0 +1,111 @@
+﻿@import 'colors';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@mixin n-p-m() {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background: $back-ground;
+}
+
+.body-bg {
+    background-image: url('./../images/bg1.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+@import 'login';
+
+.side-menu {
+    background: rgba(0,0,0,0.7);
+
+    @media screen and (max-width: 991px) {
+        height: 100px !important;
+    }
+
+    ul {
+        @include n-p-m;
+
+        li {
+            height: 100px;
+            padding-top: 20px;
+            border-left: solid 2px transparent;
+            transition: all 0.5s ease;
+            list-style: none;
+
+            &:hover {
+                border-left: solid 2px #DDD;
+                background: #3c3c3c;
+            }
+
+            a {
+                text-decoration: none;
+                text-align: center;
+                display: block;
+                transition: all 0.5s ease;
+                color: #8a8a8a;
+
+                &:hover {
+                    color: #FFF;
+                }
+
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.top-bar {
+    background: #3bafda;
+    height: 5px;
+}
+
+.top-title-bar {
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.03);
+    padding: 20px;
+
+    h4 {
+        color: #505458;
+        font-family: 'Roboto', sans-serif;
+        margin: 10px 0;
+        line-height: 22px;
+    }
+}
+
+.top-title-bar-border {
+    height: 3px;
+}
+
+.tile-outter {
+    min-height: 250px;
+    border: solid 1px #bbb;
+}
